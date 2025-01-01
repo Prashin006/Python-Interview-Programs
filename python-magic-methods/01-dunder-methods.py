@@ -2,14 +2,15 @@
 # Dunder stands for double underscore
 # These are special / reserved methods in Python that map to some kind of behaviour
 # __init__ is used to construct or create a new object
+# Everything we create in Python is essentially an object
 
-from math import sqrt
-class Rect:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    def __abs__(self):
-        return sqrt(self.x * self.x + self.y * self.y)
+str1 = "hello"
+str2 = "world"
+def func():
+    pass
 
-rectangle = Rect(3, 4)
-print("The absolute value of the diagonal of the rectangle is", abs(rectangle), sep=": ", flush=True)
+new_str = str1.__add__(str2)
+str1_len = str1.__len__()
+print(type(func))
+print(new_str)
+print(str1_len)
