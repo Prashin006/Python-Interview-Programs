@@ -21,5 +21,3 @@ class DatabaseConnection:
 
 with DatabaseConnection("ExampleDB") as db:     # calls the `__enter__` method as soon as we enter the `with` context manager
     print(f"Is connected?: {db.connected}")     # `__exit__` method is called as soon as we exit the `with` context manager whether there is an exception or not
-
-    
